@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LinearLayout because it's a simple layout and there aren't nested ViewGroups -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<LinearLayout
+		android:id="@+id/login_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingStart="@dimen/padding"
+		android:paddingEnd="@dimen/padding"
+		android:gravity="center"
+		tools:context=".screens.login.LoginFragment">
+
+		<TextView
+			android:id="@+id/email_text"
+			style="@style/BlackTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/email"
+			android:textAlignment="center" />
+
+		<EditText
+			android:id="@+id/email_edit"
+			style="@style/BlackTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:autofillHints="emailAddress"
+			android:ems="10"
+			android:hint="@string/email_text_hint"
+			android:inputType="textEmailAddress"
+			android:textAlignment="center" />
+
+		<TextView
+			android:id="@+id/password_text"
+			style="@style/BlackTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/password_text"
+			android:textAlignment="center" />
+
+		<EditText
+			android:id="@+id/password_edit"
+			style="@style/BlackTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:autofillHints="emailAddress"
+			android:ems="10"
+			android:inputType="textPassword"
+			android:textAlignment="center" />
+
+		<Button
+			android:id="@+id/create_login_button"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/create_login_button"
+			android:theme="@style/GreenButton"
+			android:layout_marginTop="@dimen/layout_margin"/>
+
+		<Button
+			android:id="@+id/login_button"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/login_button"
+			android:theme="@style/BlueButton"
+			android:layout_marginTop="@dimen/layout_margin"/>
+
+	</LinearLayout>
+</layout>
