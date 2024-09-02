@@ -5,28 +5,20 @@
 	xmlns:tools="http://schemas.android.com/tools">
 
 	<LinearLayout
-		android:id="@+id/welcome_layout"
+		android:id="@+id/shoe_list_layout"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="vertical"
 		android:layout_marginHorizontal="@dimen/default_margin"
-		tools:context=".screens.welcome.WelcomeFragment">
+		tools:context=".screens.shoelist.ShoeListFragment">
 
 		<TextView
-			android:id="@+id/welcome_text"
+			android:id="@+id/shoe_list_text"
 			style="@style/BlackTextStyle"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="@string/welcome"
+			android:text="@string/shoe_list"
 			android:textAlignment="center" />
-
-		<Button
-			android:id="@+id/show_instructions_button"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="@dimen/big_margin"
-			android:text="@string/show_instructions_button"
-			android:theme="@style/GreenButton"/>
 
 	</LinearLayout>
 </layout>

@@ -6,4 +6,8 @@
 	<string name="email_text_hint">example@domain.com</string>
 	<string name="password_text">Password</string>
 	<string name="welcome">Welcome to this amazing Shoe Store!</string>
+	<string name="instruction">Instructions</string>
+	<string name="show_instructions_button">Show instructions</string>
+	<string name="shoe_list">Shoe List</string>
+	<string name="show_shoe_list_button">Show shoe list</string>
 </resources>
