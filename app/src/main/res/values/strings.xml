@@ -13,9 +13,14 @@
 	<string name="welcome_body">Here you will find the best shoes in the whole world!
 	\n\nSuper excited you’re with us! Get ready for some amazing deals right here.
 	\n\nExciting times ahead: exclusive offers, insider tips, and much more are all coming your way.
-	\n\nOne of the best places for hiking in the area is Yosemite and you can find the best hiking boots in this store.
 	\n\nWe have added you to our mailing list. You will be among the first people to get all of our special offers, newest updates, and announcements. We will do our best not to bore you with marketing emails!
 	\n\nWe\'re elated to have you join our community. We will continue sending emails (unless you decide to unsubscribe!) to keep you updated on the latest and greatest news.
 	\n\nYou can also join our communities on other platforms! We have plenty of social media accounts!
 	\n\nRead our instructions for more information about how to buy our great shoes, reach us on social media and unsubscribe from our emails (which you won\'t need because you will love our emails)</string>
+	<string name="instruction_header">The Best Shoe Store Instructions</string>
+	<string name="instruction_body">How to buy our great shoes? That\'s easy! But to keep you curious, you can only do that in the next screen. So go ahead and click that big beautiful green button and see our shoe list as fast as possible!
+	\n\n Or stay a bit longer here and read about how to reach us on social media. We are on Facebook, Instagram and Discord. Just look it up! ;)
+	\n\n And now about unsubscribing from our emails, forget about that. You are doing great just as you are, you don\'t need to unsubscribe from anything.
+	\n\nWe will listen to what you have to say, empathize with your feelings and do whatever we have to do to keep our open communication so you don\'t unsubscribe from our emails. We are still on beta and haven\'t coded that yet, maybe?
+	\n\nEnough talking. Take a look at our shoes! Click that green inviting button!</string>
 </resources>
