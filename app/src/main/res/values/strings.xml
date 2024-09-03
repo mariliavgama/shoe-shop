@@ -5,9 +5,17 @@
 	<string name="email">Email</string>
 	<string name="email_text_hint">example@domain.com</string>
 	<string name="password_text">Password</string>
-	<string name="welcome">Welcome to this amazing Shoe Store!</string>
+	<string name="welcome_header">Welcome to The Best Shoe Store!</string>
 	<string name="instruction">Instructions</string>
 	<string name="show_instructions_button">Show instructions</string>
 	<string name="shoe_list">Shoe List</string>
 	<string name="show_shoe_list_button">Show shoe list</string>
+	<string name="welcome_body">Here you will find the best shoes in the whole world!
+	\n\nSuper excited you’re with us! Get ready for some amazing deals right here.
+	\n\nExciting times ahead: exclusive offers, insider tips, and much more are all coming your way.
+	\n\nOne of the best places for hiking in the area is Yosemite and you can find the best hiking boots in this store.
+	\n\nWe have added you to our mailing list. You will be among the first people to get all of our special offers, newest updates, and announcements. We will do our best not to bore you with marketing emails!
+	\n\nWe\'re elated to have you join our community. We will continue sending emails (unless you decide to unsubscribe!) to keep you updated on the latest and greatest news.
+	\n\nYou can also join our communities on other platforms! We have plenty of social media accounts!
+	\n\nRead our instructions for more information about how to buy our great shoes, reach us on social media and unsubscribe from our emails (which you won\'t need because you will love our emails)</string>
 </resources>
