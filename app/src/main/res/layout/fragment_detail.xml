@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LinearLayout because it's a simple layout and there aren't nested ViewGroups -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<LinearLayout
+		android:id="@+id/detail_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:layout_margin="@dimen/default_margin"
+		tools:context=".screens.detail.DetailFragment">
+
+		<TextView
+			android:id="@+id/detail_text"
+			style="@style/HeaderTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Test"
+			android:textAlignment="center" />
+
+		<EditText
+			android:id="@+id/detail_edit"
+			style="@style/HeaderTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:autofillHints="emailAddress"
+			android:ems="10"
+			android:hint="TODO"
+			android:inputType="textEmailAddress"
+			android:textAlignment="center" />
+
+		<TextView
+			android:id="@+id/password_text"
+			style="@style/HeaderTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/big_margin"
+			android:text="@string/password_text"
+			android:textAlignment="center" />
+
+		<EditText
+			android:id="@+id/password_edit"
+			style="@style/HeaderTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:autofillHints="emailAddress"
+			android:ems="10"
+			android:inputType="textPassword"
+			android:textAlignment="center" />
+
+		<Button
+			android:id="@+id/create_login_button"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/big_margin"
+			android:text="@string/save_button"
+			android:theme="@style/GreenButton"/>
+
+		<Button
+			android:id="@+id/login_button"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/small_margin"
+			android:text="@string/cancel_button"
+			android:theme="@style/BlueButton"/>
+
+	</LinearLayout>
+</layout>

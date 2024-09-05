@@ -24,4 +24,7 @@
 	\n\nWe will listen to what you have to say, empathize with your feelings and do whatever we have to do to keep our open communication so you don\'t unsubscribe from our emails. We are still on beta and haven\'t coded that yet, maybe?
 	\n\nEnough talking. Take a look at our shoes! Click that green inviting button!</string>
 	<string name="add_shoe">Add a shoe to the list</string>
+	<string name="save_button">Save</string>
+	<string name="cancel_button">Cancel</string>
+	<string name="logout">Logout</string>
 </resources>

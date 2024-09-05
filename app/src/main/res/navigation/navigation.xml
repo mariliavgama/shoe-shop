@@ -46,8 +46,27 @@
 		android:name="com.udacity.shoestore.screens.shoelist.ShoeListFragment"
 		tools:layout="@layout/fragment_shoe_list">
 		<action
-			android:id="@+id/action_shoe_list_login"
+			android:id="@+id/action_shoe_list_to_login"
 			app:destination="@id/login_destination"
+			app:enterAnim="@anim/slide_in_right"
+			app:exitAnim="@anim/slide_out_left"
+			app:popEnterAnim="@anim/slide_in_left"
+			app:popExitAnim="@anim/slide_out_right"/>
+		<action
+			android:id="@+id/action_shoe_list_to_detail"
+			app:destination="@id/detail_destination"
+			app:enterAnim="@anim/slide_in_right"
+			app:exitAnim="@anim/slide_out_left"
+			app:popEnterAnim="@anim/slide_in_left"
+			app:popExitAnim="@anim/slide_out_right"/>
+	</fragment>
+	<fragment
+		android:id="@+id/detail_destination"
+		android:name="com.udacity.shoestore.screens.detail.DetailFragment"
+		tools:layout="@layout/fragment_detail">
+		<action
+			android:id="@+id/action_detail_to_shoe_list"
+			app:destination="@id/shoe_list_destination"
 			app:enterAnim="@anim/slide_in_right"
 			app:exitAnim="@anim/slide_out_left"
 			app:popEnterAnim="@anim/slide_in_left"
