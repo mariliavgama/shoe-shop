@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- LinearLayout because it's a simple layout and there aren't nested ViewGroups -->
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools">
 
-	<LinearLayout
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
 		android:id="@+id/shoe_list_layout"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:orientation="vertical"
 		android:layout_marginHorizontal="@dimen/default_margin"
+		android:layout_marginBottom="@dimen/default_margin"
+		android:layout_marginTop="?attr/actionBarSize"
 		tools:context=".screens.shoelist.ShoeListFragment">
 
-		<TextView
-			android:id="@+id/shoe_list_text"
-			style="@style/HeaderTextStyle"
+		<ScrollView
+			android:id="@+id/shoe_list_scroll"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="@string/shoe_list"
-			android:textAlignment="center" />
+			android:layout_height="match_parent">
 
-	</LinearLayout>
+			<LinearLayout
+				android:id="@+id/shoe_list"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"/>
+		</ScrollView>
+
+		<com.google.android.material.floatingactionbutton.FloatingActionButton
+			android:id="@+id/fab"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom|end"
+			android:src="@drawable/ic_add"
+			android:contentDescription="@string/add_shoe" />
+
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </layout>

@@ -45,14 +45,12 @@
 		android:id="@+id/shoe_list_destination"
 		android:name="com.udacity.shoestore.screens.shoelist.ShoeListFragment"
 		tools:layout="@layout/fragment_shoe_list">
-		<!--action
-			android:id="@+id/action_game_to_score"
-			app:destination="@id/score_destination"
+		<action
+			android:id="@+id/action_shoe_list_login"
+			app:destination="@id/login_destination"
 			app:enterAnim="@anim/slide_in_right"
 			app:exitAnim="@anim/slide_out_left"
-			app:launchSingleTop="true"
-			app:popEnterAnim="@anim/slide_in_right"
-			app:popExitAnim="@anim/slide_out_left"
-			app:popUpTo="@+id/title_destination" /-->
+			app:popEnterAnim="@anim/slide_in_left"
+			app:popExitAnim="@anim/slide_out_right"/>
 	</fragment>
 </navigation>

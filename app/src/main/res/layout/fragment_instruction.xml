@@ -12,6 +12,7 @@
 		android:orientation="vertical"
 		android:layout_marginHorizontal="@dimen/default_margin"
 		android:layout_marginBottom="@dimen/default_margin"
+		android:layout_marginTop="?attr/actionBarSize"
 		tools:context=".screens.instruction.InstructionFragment">
 
 		<TextView
@@ -20,7 +21,6 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="@string/instruction_header"
-			android:layout_marginTop="?attr/actionBarSize"
 			android:textAlignment="center"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
