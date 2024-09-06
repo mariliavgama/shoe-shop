@@ -4,16 +4,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentDetailBinding
+import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.screens.shoelist.ShoeViewModel
 
 /**
  * Shoe details fragment.
  */
 class DetailFragment : Fragment() {
+
+    private val shoeViewModel: ShoeViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -21,14 +27,28 @@ class DetailFragment : Fragment() {
         val binding: FragmentDetailBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_detail, container, false)
 
-        /*binding.createLoginButton.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginToWelcome())
+        binding.saveButton.setOnClickListener {
+            val name = binding.detailNameEdit.text.toString()
+            val size = binding.detailSizeEdit.text.toString()
+            val company = binding.detailCompanyEdit.text.toString()
+            val description = binding.detailDescriptionEdit.text.toString()
+
+            if (name.isNotEmpty() && size.isNotEmpty() && company.isNotEmpty() && description.isNotEmpty()) {
+                saveShoe(Shoe(name, size.toDouble(), company, description))
+            } else {
+                Toast.makeText(context, R.string.empty_fields_error, Toast.LENGTH_LONG).show()
+            }
         }
 
-        binding.loginButton.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginToWelcome())
-        }*/
+        binding.cancelButton.setOnClickListener {
+            findNavController().navigate(DetailFragmentDirections.actionDetailToShoeList())
+        }
 
         return binding.root
+    }
+
+    private fun saveShoe(newShoe: Shoe) {
+        shoeViewModel.addShoe(newShoe)
+        findNavController().navigate(DetailFragmentDirections.actionDetailToShoeList())
     }
 }

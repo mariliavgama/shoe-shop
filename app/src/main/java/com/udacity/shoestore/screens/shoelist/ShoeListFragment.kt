@@ -7,23 +7,25 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.MenuProvider
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.core.widget.TextViewCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 
+
 /**
  * ShoeListFragment fragment.
  */
 class ShoeListFragment : Fragment() {
 
-    private lateinit var viewModel: ShoeListViewModel
+    private val shoeViewModel: ShoeViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -31,7 +33,22 @@ class ShoeListFragment : Fragment() {
         val binding: FragmentShoeListBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_list, container, false)
 
-        viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
+        shoeViewModel.shoes.observe(viewLifecycleOwner) { shoes ->
+            // Update UI with the list of shoes
+            shoes.forEach {
+                val params: LinearLayout.LayoutParams =
+                    LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                params.setMargins(0, 0, 0, resources.getDimensionPixelSize(R.dimen.default_margin))
+
+                val shoeItem = TextView(context).apply {
+                    text = context.getString(R.string.shoe_header, it.name, it.company, it.size, it.description)
+                    layoutParams = params
+                }
+                TextViewCompat.setTextAppearance(shoeItem, R.style.HeaderTextStyle)
+
+                binding.shoeList.addView(shoeItem)
+            }
+        }
 
         binding.fab.setOnClickListener {
             findNavController().navigate(ShoeListFragmentDirections.actionShoeListToDetail())
