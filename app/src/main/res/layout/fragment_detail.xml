@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- LinearLayout because it's a simple layout and there aren't nested ViewGroups -->
+<!-- ConstraintLayout because it's a more complex layout and to help position the views easily -->
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
