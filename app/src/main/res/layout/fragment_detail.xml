@@ -2,70 +2,140 @@
 <!-- LinearLayout because it's a simple layout and there aren't nested ViewGroups -->
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools">
 
-	<LinearLayout
+	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/detail_layout"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:gravity="center"
+		android:layout_marginHorizontal="@dimen/default_margin"
+		android:layout_marginTop="?attr/actionBarSize"
+		android:layout_marginBottom="@dimen/small_margin"
 		android:orientation="vertical"
-		android:layout_margin="@dimen/default_margin"
 		tools:context=".screens.detail.DetailFragment">
 
 		<TextView
-			android:id="@+id/detail_text"
+			android:id="@+id/detail_name_text"
 			style="@style/HeaderTextStyle"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="Test"
-			android:textAlignment="center" />
+			android:text="@string/shoe_name"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
 
 		<EditText
-			android:id="@+id/detail_edit"
+			android:id="@+id/detail_name_edit"
 			style="@style/HeaderTextStyle"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:autofillHints="emailAddress"
+			android:autofillHints="text"
 			android:ems="10"
-			android:hint="TODO"
-			android:inputType="textEmailAddress"
-			android:textAlignment="center" />
+			android:inputType="text"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/detail_name_text"/>
 
 		<TextView
-			android:id="@+id/password_text"
+			android:id="@+id/detail_company_text"
 			style="@style/HeaderTextStyle"
-			android:layout_width="match_parent"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:layout_marginTop="@dimen/big_margin"
-			android:text="@string/password_text"
-			android:textAlignment="center" />
+			android:text="@string/company"
+			android:layout_marginEnd="@dimen/small_margin"
+			app:layout_constraintEnd_toStartOf="@+id/detail_size_text"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/detail_name_edit"/>
 
 		<EditText
-			android:id="@+id/password_edit"
+			android:id="@+id/detail_company_edit"
+			style="@style/HeaderTextStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:autofillHints="text"
+			android:ems="10"
+			android:inputType="text"
+			android:layout_marginEnd="@dimen/small_margin"
+			app:layout_constraintEnd_toStartOf="@+id/detail_size_edit"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/detail_company_text"/>
+
+		<TextView
+			android:id="@+id/detail_size_text"
+			style="@style/HeaderTextStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:text="@string/shoe_size"
+			android:layout_marginStart="@dimen/small_margin"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toEndOf="@+id/detail_company_text"
+			app:layout_constraintTop_toBottomOf="@id/detail_name_edit"/>
+
+		<EditText
+			android:id="@+id/detail_size_edit"
+			style="@style/HeaderTextStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:autofillHints="text"
+			android:ems="10"
+			android:inputType="number"
+			android:layout_marginStart="@dimen/small_margin"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toEndOf="@+id/detail_company_edit"
+			app:layout_constraintTop_toBottomOf="@id/detail_size_text"/>
+
+		<TextView
+			android:id="@+id/detail_description_text"
 			style="@style/HeaderTextStyle"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:autofillHints="emailAddress"
+			android:text="@string/shoe_description"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/detail_size_edit"/>
+
+		<EditText
+			android:id="@+id/detail_description_edit"
+			style="@style/HeaderTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:autofillHints="text"
 			android:ems="10"
-			android:inputType="textPassword"
-			android:textAlignment="center" />
+			android:inputType="text"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/detail_description_text"/>
 
 		<Button
-			android:id="@+id/create_login_button"
-			android:layout_width="match_parent"
+			android:id="@+id/save_button"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/big_margin"
+			android:layout_marginEnd="@dimen/small_margin"
 			android:text="@string/save_button"
-			android:theme="@style/GreenButton"/>
+			android:theme="@style/GreenButton"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@+id/cancel_button"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toStartOf="parent"/>
 
 		<Button
-			android:id="@+id/login_button"
-			android:layout_width="match_parent"
+			android:id="@+id/cancel_button"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/small_margin"
 			android:layout_marginTop="@dimen/small_margin"
 			android:text="@string/cancel_button"
-			android:theme="@style/BlueButton"/>
+			android:theme="@style/RedButton"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toEndOf="@+id/save_button"/>
 
-	</LinearLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

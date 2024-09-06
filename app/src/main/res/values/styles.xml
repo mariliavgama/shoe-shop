@@ -43,4 +43,11 @@
         <item name="colorAccent">@color/selected_green_color</item>
     </style>
 
+    <style name="RedButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/red_button_color</item>
+        <item name="colorControlHighlight">@color/selected_red_color</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="colorAccent">@color/selected_red_color</item>
+    </style>
+
 </resources>
