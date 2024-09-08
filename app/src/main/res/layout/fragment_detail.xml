@@ -5,6 +5,12 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools">
 
+	<!--data>
+		<variable
+			name="shoe"
+			type="com.udacity.shoestore.models.Shoe"/>
+	</data-->
+
 	<data>
 		<variable
 			name="shoeName"
@@ -58,8 +64,8 @@
 			style="@style/HeaderTextStyle"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:text="@string/company"
 			android:layout_marginEnd="@dimen/small_margin"
+			android:text="@string/company"
 			app:layout_constraintEnd_toStartOf="@+id/detail_size_text"
 			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintStart_toStartOf="parent"
@@ -70,11 +76,11 @@
 			style="@style/HeaderTextStyle"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
+			android:layout_marginEnd="@dimen/small_margin"
 			android:autofillHints="text"
 			android:ems="10"
 			android:inputType="text"
 			android:text="@={shoeCompany}"
-			android:layout_marginEnd="@dimen/small_margin"
 			app:layout_constraintEnd_toStartOf="@+id/detail_size_edit"
 			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintStart_toStartOf="parent"
@@ -85,8 +91,8 @@
 			style="@style/HeaderTextStyle"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:text="@string/shoe_size"
 			android:layout_marginStart="@dimen/small_margin"
+			android:text="@string/shoe_size"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintStart_toEndOf="@+id/detail_company_text"
@@ -97,11 +103,11 @@
 			style="@style/HeaderTextStyle"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/small_margin"
 			android:autofillHints="text"
 			android:ems="10"
 			android:inputType="number"
 			android:text="@={shoeSize}"
-			android:layout_marginStart="@dimen/small_margin"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintHorizontal_bias="0.5"
 			app:layout_constraintStart_toEndOf="@+id/detail_company_edit"

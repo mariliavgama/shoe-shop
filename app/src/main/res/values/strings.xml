@@ -31,7 +31,9 @@
 	<string name="company">Company</string>
 	<string name="shoe_size">Shoe Size</string>
 	<string name="shoe_description">Description</string>
-	<string name="shoe_header">Name: %s. Company: %s. Size %.2f%n \nDescription: %s</string>
 	<string name="shoe_list_header">Add Shoes to The List</string>
 	<string name="empty_fields_error">No fields can be empty.</string>
+	<string name="shoe_item_header">Name: %s</string>
+	<string name="shoe_item_subheader">Company: %s. Size:  %.2f</string>
+	<string name="shoe_item_body">Description: %s</string>
 </resources>

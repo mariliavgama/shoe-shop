@@ -8,8 +8,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:layout_marginHorizontal="@dimen/default_margin"
-		android:layout_marginBottom="@dimen/default_margin"
 		android:layout_marginTop="?attr/actionBarSize"
+		android:layout_marginBottom="@dimen/default_margin"
 		tools:context=".screens.shoelist.ShoeListFragment">
 
 		<ScrollView
@@ -27,9 +27,9 @@
 					style="@style/HeaderTextStyle"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/big_margin"
 					android:text="@string/shoe_list_header"
-					android:textAlignment="center"
-					android:layout_marginBottom="@dimen/big_margin"/>
+					android:textAlignment="center"/>
 			</LinearLayout>
 		</ScrollView>
 
@@ -38,8 +38,8 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="bottom|end"
-			android:src="@drawable/ic_add"
-			android:contentDescription="@string/add_shoe" />
+			android:contentDescription="@string/add_shoe"
+			android:src="@drawable/ic_add" />
 
 	</androidx.coordinatorlayout.widget.CoordinatorLayout>
 

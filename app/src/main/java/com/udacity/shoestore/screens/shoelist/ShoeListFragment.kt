@@ -7,9 +7,6 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.core.widget.TextViewCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -21,7 +18,7 @@ import com.udacity.shoestore.databinding.FragmentShoeListBinding
 
 
 /**
- * ShoeListFragment fragment.
+ * Shoe List fragment.
  */
 class ShoeListFragment : Fragment() {
 
@@ -36,17 +33,11 @@ class ShoeListFragment : Fragment() {
         shoeViewModel.shoes.observe(viewLifecycleOwner) { shoes ->
             // Update UI with the list of shoes
             shoes.forEach {
-                val params: LinearLayout.LayoutParams =
-                    LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-                params.setMargins(0, 0, 0, resources.getDimensionPixelSize(R.dimen.default_margin))
+                val shoeView = context?.let { safeContext -> ShoeItemView(safeContext) }
 
-                val shoeItem = TextView(context).apply {
-                    text = context.getString(R.string.shoe_header, it.name, it.company, it.size, it.description)
-                    layoutParams = params
-                }
-                TextViewCompat.setTextAppearance(shoeItem, R.style.HeaderTextStyle)
+                shoeView?.setShoe(it)
 
-                binding.shoeList.addView(shoeItem)
+                binding.shoeList.addView(shoeView)
             }
         }
 

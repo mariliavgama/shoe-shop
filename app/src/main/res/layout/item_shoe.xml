@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LinearLayout because it's a simple layout and there aren't nested ViewGroups -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+		<variable
+			name="shoe"
+			type="com.udacity.shoestore.models.Shoe"/>
+	</data>
+
+	<LinearLayout
+		android:id="@+id/item_shoe_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_margin="@dimen/default_margin"
+		android:orientation="vertical"
+		tools:context=".screens.login.LoginFragment">
+
+		<TextView
+			android:id="@+id/shoe_name"
+			style="@style/HeaderTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@{String.format(@string/shoe_item_header, shoe.name)}"/>
+		<TextView
+			android:id="@+id/shoe_company"
+			style="@style/BodyTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@{String.format(@string/shoe_item_subheader, shoe.company, shoe.size)}"/>
+		<TextView
+			android:id="@+id/shoe_description"
+			style="@style/BodyTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@{String.format(@string/shoe_item_body, shoe.description)}"/>
+
+	</LinearLayout>
+
+</layout>
