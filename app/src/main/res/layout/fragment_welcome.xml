@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ConstraintLayout to easily align the scrollview, button at the bottom, etc -->
+<!-- ConstraintLayout because it's a more complex layout and to easily align the scrollview, button at the bottom, etc -->
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"

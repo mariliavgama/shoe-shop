@@ -5,6 +5,21 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools">
 
+	<data>
+		<variable
+			name="shoeName"
+			type="String" />
+		<variable
+			name="shoeCompany"
+			type="String" />
+		<variable
+			name="shoeSize"
+			type="String" />
+		<variable
+			name="shoeDescription"
+			type="String" />
+	</data>
+
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/detail_layout"
 		android:layout_width="match_parent"
@@ -33,6 +48,7 @@
 			android:autofillHints="text"
 			android:ems="10"
 			android:inputType="text"
+			android:text="@={shoeName}"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toBottomOf="@id/detail_name_text"/>
@@ -57,6 +73,7 @@
 			android:autofillHints="text"
 			android:ems="10"
 			android:inputType="text"
+			android:text="@={shoeCompany}"
 			android:layout_marginEnd="@dimen/small_margin"
 			app:layout_constraintEnd_toStartOf="@+id/detail_size_edit"
 			app:layout_constraintHorizontal_bias="0.5"
@@ -83,6 +100,7 @@
 			android:autofillHints="text"
 			android:ems="10"
 			android:inputType="number"
+			android:text="@={shoeSize}"
 			android:layout_marginStart="@dimen/small_margin"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintHorizontal_bias="0.5"
@@ -107,6 +125,7 @@
 			android:autofillHints="text"
 			android:ems="10"
 			android:inputType="text"
+			android:text="@={shoeDescription}"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toBottomOf="@id/detail_description_text"/>

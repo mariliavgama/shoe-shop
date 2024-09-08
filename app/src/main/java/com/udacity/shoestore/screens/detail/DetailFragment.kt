@@ -28,12 +28,12 @@ class DetailFragment : Fragment() {
             inflater, R.layout.fragment_detail, container, false)
 
         binding.saveButton.setOnClickListener {
-            val name = binding.detailNameEdit.text.toString()
-            val size = binding.detailSizeEdit.text.toString()
-            val company = binding.detailCompanyEdit.text.toString()
-            val description = binding.detailDescriptionEdit.text.toString()
+            val name = binding.shoeName
+            val size = binding.shoeSize
+            val company = binding.shoeCompany
+            val description = binding.shoeDescription
 
-            if (name.isNotEmpty() && size.isNotEmpty() && company.isNotEmpty() && description.isNotEmpty()) {
+            if (!name.isNullOrEmpty() && !size.isNullOrEmpty() && !company.isNullOrEmpty() && !description.isNullOrEmpty()) {
                 saveShoe(Shoe(name, size.toDouble(), company, description))
             } else {
                 Toast.makeText(context, R.string.empty_fields_error, Toast.LENGTH_LONG).show()
@@ -46,6 +46,18 @@ class DetailFragment : Fragment() {
 
         return binding.root
     }
+    /*
+    class MyActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMyBinding
+    var userInput: String = ""
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_my)
+        binding.userInput = userInput
+    }
+}
+     */
 
     private fun saveShoe(newShoe: Shoe) {
         shoeViewModel.addShoe(newShoe)
