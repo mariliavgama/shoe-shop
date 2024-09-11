@@ -43,12 +43,11 @@ This project consists of five screens:
 
 ## Shoe Detail destination
 
-    * A new layout
-    * A TextView label and EditView for the:
+   * A new layout
+   * A TextView label and EditView for the:
       - Shoe Name
       - Company
       - Shoe Size
       - Description
-    * A Cancel button with an action to navigate back to the shoe list screen
-    * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
-    
+   * A Cancel button with an action to navigate back to the shoe list screen
+   * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
