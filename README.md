@@ -10,11 +10,10 @@ This project consists of five screens:
 
 ## Login destination
 
-   * Email and password labels 
-
-   - Email and password fields
-   - Buttons for creating a new login and logging in with an existing account
-   - Clicking either button navigates to the Welcome Screen.
+   * Email and password labels
+   * Email and password fields
+   * Buttons for creating a new login and logging in with an existing account
+   * Clicking either button navigates to the Welcome Screen.
 
 ## Welcome screen destination
 
